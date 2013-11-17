@@ -1,0 +1,132 @@
+/*
+    Setting the margin to auto centers the page in the viewport.
+    Petals background image is 477 x 382px
+*/
+/* @group general styles
+------------------------------------------------------------ */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    color: #fff;
+    width: 960px;
+    margin-left: 0;
+    margin-right: auto; /* left align in viewport */
+    background-color: black;
+}
+
+/*  Breakpoint
+    Display flower petals background if display width is at least 768 pixels.
+*/
+@media all and (min-width: 768px) {
+    body {
+        background: #000000 url(http://www.union.edu/images/erik/wd-falling-petals-left.gif) no-repeat top left;
+    }
+}
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 { color: #fff; }
+
+a:link {color:#8F8FB8;}       /* unvisited link */
+a:hover {color:#8F8FA8;}   /* mouse over link, selected link */
+a:visited {color:#8F8FC8;}   /* visited link */
+
+
+/* @group page structure 
+------------------------------------------------------------ */
+
+#row1 {
+    text-align: center;
+    /*margin-left: 150px; (not needed with smaller typekit font) */
+    line-height: 9em;
+}
+
+#row2 { margin-left: 150px; /*text-align: right;*/ }
+
+#row2 #content, #row2 #nav {
+    text-align: left;
+}
+
+
+
+
+/* Page components
+------------------------------------------------------------ */
+
+#title h1 a {  font-size: 2em; color: #fff; } /* Site Heading */
+/* h1.title { font-size: 2em; } Page Title */
+
+#content { padding-left: 20px; padding-right: 20px; }
+
+#right { float:right; }
+
+
+/* Menu, CSS Mastery Pg 135
+------------------------------------------------------------ */
+
+ul#nav li a { font-size: 1.6em;}
+
+ul#nav {
+
+    /* Remove indentation by zeroing down margin and padding. Remove default bullet. */
+    margin:0; padding: 0; list-style-type: none;
+
+    /* Give navigation menu a light green background and dark green border. */
+    background-color: #FFF;
+    border: 1px solid #6D6D6D;
+}
+
+ul#nav a {
+
+    /* Set anchor display property to block. */
+    display: block;
+    /* Set the link text color, turn off underlines & center text. */
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    /* Use line-height (instead of height) to control the height of the buttons. */
+    line-height: 1.5; 
+
+    /* Set the top border lighter than the bg color & the bottom border slightly darker
+       to create the beveled effect. */ 
+    border-top: 1px solid #A9A9A9;
+    border-bottom: 1px solid #7A7A7A;
+}
+
+/*  Remove the bottom border */
+ul#nav li:last-child a { border-bottom: 0; }
+
+
+/*  Simple Rollovers, CSS Mastery, pg 120 */
+#nav a:hover, a:focus {
+    
+    /*border-color: #990000;*/
+    color: #fff;
+    background-color: #000;
+    border-bottom: 1px solid #8B8B8B;
+}
+#nav li.selected a {
+    color: #fff;
+    background-color: #000;
+    border-bottom: 1px solid #8B8B8B;
+    /* Applying padding to the left side of the li creates enough space for a custom bullet.
+    background: url(http://www.union.edu/images/erik/petal.png) no-repeat 0 50%;
+    padding: 0.3em 1em;*/
+}
+
+/*#nav a:link { color:#FFF; }      /* unvisited link */
+/*#nav a:visited { color:#FFF; }  /* visited link */
+/*#nav a:hover, a:active { color:grey; }*/
+ 
+
+
+
+/* claudiaanderikhoney.tumblr.com
+------------------------------------------------------------ */
+
+div.cart > .text > p:first-child {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
